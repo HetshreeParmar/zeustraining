@@ -16,12 +16,25 @@ body {
 }
 
 .header {
-    background-color: #222222;
+    background-color: #25313f;
     height: 56px;
     border-bottom: 2px solid rgba(49, 185, 228, 1);
     display: flex;
     justify-content: start;
     align-items: center;
+}
+
+nav::before {
+    content: " ";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    height: 56px;
+    background-image: url("/images/header\ pattern\ image.png");
+    mix-blend-mode: overlay;
+    opacity: 1;
 }
 
 .header>img {

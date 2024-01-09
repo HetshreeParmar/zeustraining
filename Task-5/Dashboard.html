@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dashboard.css">
+    <title>Dashboard Page</title>
+</head>
+
+<body>
+    <div class="flex">
+        <nav class="header">
+            <img class="hLogo" src="/icons/logo used in header.svg" alt="HeaderLogo">
+            <div class="links active a-disabled">DASHBOARD</div>
+            <div class="links a-disabled">CONTENT</div>
+            <div class="links a-disabled">USERS</div>
+            <div class="links a-disabled">REPORTS</div>
+            <div class="links a-disabled">ADMIN</div>
+            <div class="links"><img src="/icons/alerts.svg" alt="alertLogo"></div>
+            <div class="links"><img src="/icons/announcements.svg" alt="announcementLogo"></div>
+            <div class="links"><img src="/icons/account_circle.svg" alt="accountLogo"></div>
+            <div class="a-able"><img src="/icons/hamburger-menu.svg" alt="menuLogo"></div>
+        </nav>
+        <div class="container">
+            <div class="courses">
+                <div class="c1">
+                    <img src="/icons/courses.svg" alt="courseLogo">
+                    <div class="cNum">4</div>
+                    <div class="cName">Courses</div>
+                </div>
+                <div class="c2">
+                    <img src="/icons/classes.svg" alt="classLogo">
+                    <div class="cNum">4</div>
+                    <div class="cName">Classes</div>
+                </div>
+            </div>
+            <div class="info">
+                <div class="c">Showing 4 of 4 courses</div>
+                <div class="s-div">
+                    <div class="sort-input">Sort By: </div>
+                    <div class="sort">
+                        <select name="course" id="" class="selectC">
+                            <option value="" disabled selected>Cource Name</option>
+                            <option value="">Acceleration</option>
+                            <option value="">Displacement, Velocity and Speed</option>
+                            <option value="">Introduction to Biology: Micro organisms and how they affec...</option>
+                            <option value="">Introduction to High School Mathematics</option>
+                        </select>
+                        <img src="/icons/sort.svg" alt="sortLogo">
+                    </div>
+                </div>
+            </div>
+            <hr class="endLine" />
+            <div class="c-grid">
+                <div class="c-cards">
+                    <div class="card">
+                        <img src="/images/imageMask.png" alt="cardImage" class="card-img">
+                        <div class="card-details">
+                            <div class="l1">
+                                <div class="card-title">Acceleration</div>
+                                <img src="/icons/favourite.svg" alt="favLogo">
+                            </div>
+                            <div class="l2 c-label">
+                                Physics | Garade 7 <span>+2</span>
+                            </div>
+                            <div class="l3">
+                                <p><strong>4</strong> Units</p>
+                                <p><strong>18</strong> Lessons</p>
+                                <p><strong>24</strong> Topics</p>
+                            </div>
+                            <select name="" id="" class="card-select-input">
+                                <option value="">Mr. Frank's Class B</option>
+                                <option value="">Mr. Frank's Class A</option>
+                            </select>
+                            <div class="l4">
+                                <p>50 Students | </p>
+                                <p>21-Jan-2020 - 21-Aug-2020</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-icons">
+                        <img src="/icons/preview.svg" alt="previewLogo">
+                        <img src="/icons/manage course.svg" alt="manageLogo">
+                        <img src="/icons/grade submissions.svg" alt="submissionsLogo">
+                        <img src="/icons/reports.svg" alt="reportLogo">
+                    </div>
+                </div>
+                <div class="c-cards">
+                    <div class="card">
+                        <img src="/images/imageMask-1.png" alt="cardImage" class="card-img">
+                        <div class="card-details">
+                            <div class="l1">
+                                <div class="card-title">Displacement, velocity and Speed</div>
+                                <img src="/icons/favourite.svg" alt="favLogo">
+                            </div>
+                            <div class="l2 c-label">
+                                Physics 2 | Garade 6 <span>+3</span>
+                            </div>
+                            <div class="l3">
+                                <p><strong>2</strong> Units</p>
+                                <p><strong>15</strong> Lessons</p>
+                                <p><strong>20</strong> Topics</p>
+                            </div>
+                            <select name="" id="" class="card-select-input">
+                                <option value="">No Classes</option>
+                                <option value="">Mr. Frank's Class A</option>
+                                <option value="">Mr. Frank's Class B</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="card-icons">
+                        <img src="/icons/preview.svg" alt="previewLogo">
+                        <img class="i-disabled" src="/icons/manage course.svg" alt="manageLogo">
+                        <img class="i-disabled" src="/icons/grade submissions.svg" alt="submissionsLogo">
+                        <img src="/icons/reports.svg" alt="reportLogo">
+                    </div>
+                </div>
+                <div class="c-cards">
+                    <div class="card">
+                        <img src="/images/imageMask-2.png" alt="cardImage" class="card-img">
+                        <div class="card-details">
+                            <div class="l1">
+                                <div class="card-title">Introduction to Biology: Micro organisms and how they affec...
+                                </div>
+                                <img src="/icons/favourite.svg" alt="favLogo">
+                            </div>
+                            <div class="l2 c-label">
+                                Biology | Garade 4 <span>+1</span>
+                            </div>
+                            <div class="l3">
+                                <p><strong>5</strong> Units</p>
+                                <p><strong>16</strong> Lessons</p>
+                                <p><strong>22</strong> Topics</p>
+                            </div>
+                            <select name="" id="" class="card-select-input">
+                                <option value="">All Classes</option>
+                                <option value="">Mr. Frank's Class A</option>
+                                <option value="">Mr. Frank's Class B</option>
+                            </select>
+                            <div class="l4">
+                                <p>300 Students </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-icons">
+                        <img src="/icons/preview.svg" alt="previewLogo">
+                        <img class="i-disabled" src="/icons/manage course.svg" alt="manageLogo">
+                        <img class="i-disabled" src="/icons/grade submissions.svg" alt="submissionsLogo">
+                        <img src="/icons/reports.svg" alt="reportLogo">
+                    </div>
+                </div>
+                <div class="c-cards">
+                    <div class="card">
+                        <img src="/images/imageMask-3.png" alt="cardImage" class="card-img">
+                        <div class="card-details">
+                            <div class="l1">
+                                <div class="card-title">Introductionn to High School Mathematics</div>
+                                <img src="/icons/favourite.svg" alt="favLogo">
+                            </div>
+                            <div class="l2 c-label">
+                                Mathematics | Garade 8 <span>+3</span>
+                            </div>
+                            <select name="" id="" class="card-select-input">
+                                <option value="">Mr. Frank's Class A</option>
+                                <option value="">Mr. Frank's Class B</option>
+                            </select>
+                            <div class="l4">
+                                <p>44 Students | </p>
+                                <p>14-Oct-2019 - 20-Oct-2020</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-icons">
+                        <img src="/icons/preview.svg" alt="previewLogo">
+                        <img src="/icons/manage course.svg" alt="manageLogo">
+                        <img src="/icons/grade submissions.svg" alt="submissionsLogo">
+                        <img src="/icons/reports.svg" alt="reportLogo">
+                    </div>
+                </div>
+            </div>
+            <p class="f">About us <b>|</b> Contact Us</p>
+        </div>
+        <div class="footer">
+            <img src="/icons/logo used in footer.svg" alt="FooterLogo">&nbsp;&nbsp;
+            <b>|</b>&nbsp;&nbsp;
+            <p>Copyrigth &copy; 2020-2021</p>&nbsp;&nbsp;
+            <p>Zeus Learning Pvt. Ltd.</p>&nbsp;&nbsp;
+            <p>All rights reserved.</p>
+        </div>
+    </div>
+</body>
+
+</html>
