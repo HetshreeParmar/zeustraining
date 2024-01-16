@@ -1,12 +1,12 @@
 const cards = [{
-        "topic": "Accelerations",
+        "title": "Accelerations",
         "subject": "Physics",
         "grade": "grade 7",
         "kt": " +2",
         "unit": 4,
         "lesson": 18,
-        "nooftopic": 24,
-        "class": ["Mr. Frank's Class B", "Mr. Frank's Class B"],
+        "topic": 24,
+        "class": ["Mr. Frank's Class A", "Mr. Frank's Class B"],
         "number_of_students": 50,
         "date": "21-jan-2020 - 21-aug-2020",
         "favorite": true,
@@ -18,13 +18,13 @@ const cards = [{
         "image": "./images/imageMask.png"
     },
     {
-        "topic": "Displacement, Velocity and Speed",
+        "title": "Displacement, Velocity and Speed",
         "subject": "Physics",
         "grade": "grade 6",
         "kt": " +3",
         "unit": 2,
         "lesson": 15,
-        "nooftopic": 20,
+        "topic": 20,
         "class": [],
         "number_of_students": 0,
         "date": "",
@@ -37,14 +37,14 @@ const cards = [{
         "image": "./images/imageMask-1.png"
     },
     {
-        "topic": "Introduction to Biology: Micro organisms and how they affect the other Life Systems in En...",
+        "title": "Introduction to Biology: Micro organisms and how they affect the other Life Systems in En...",
         "subject": "Biology",
         "grade": "grade 4",
         "kt": " +1",
         "unit": 5,
         "lesson": 16,
-        "nooftopic": 22,
-        "class": ["Mr. Frank's Class B", "Mr. Frank's Class B"],
+        "topic": 22,
+        "class": ["Mr. Frank's Class B", "Mr. Frank's Class A"],
         "number_of_students": 300,
         "date": "",
         "favorite": true,
@@ -56,14 +56,14 @@ const cards = [{
         "image": "./images/imageMask-3.png"
     },
     {
-        "topic": "Introduction to High School Mathematics",
+        "title": "Introduction to High School Mathematics",
         "subject": "Mathematics",
         "grade": "grade 8",
         "kt": " +3",
         "unit": 0,
         "lesson": 0,
-        "nooftopic": 0,
-        "class": ["Mr. Frank's Class B", "Mr. Frank's Class B"],
+        "topic": 0,
+        "class": ["Mr. Frank's Class A", "Mr. Frank's Class B"],
         "number_of_students": 44,
         "date": "14-Oct-2019 - 20-Oct-2020",
         "favorite": false,
@@ -73,7 +73,7 @@ const cards = [{
         "report": true,
         "expiry": true,
         "image": "./images/imageMask-2.png"
-    },
-];
+    }
+]
 
 export default cards;

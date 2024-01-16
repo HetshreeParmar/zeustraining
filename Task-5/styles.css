@@ -139,6 +139,28 @@ body {
     margin-right: 24px;
 }
 
+.course__cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 24px;
+}
+
+.cards__data {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 25px 24px 16px 0;
+}
+
+.card__1,
+.card__2,
+.card__3,
+.card__4 {
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+}
+
 .c-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -157,6 +179,7 @@ body {
 
 .card-img {
     margin: 24px 16px 16px 24px;
+    cursor: pointer;
 }
 
 .card-details {
@@ -223,6 +246,14 @@ body {
     padding: 16px 20px 9px 20px;
     border-top: rgb(0, 0, 0, 0.12) 1px solid;
     margin: auto 24px 0 24px;
+}
+
+.card-icons>img {
+    cursor: pointer;
+}
+
+.i-disabled {
+    opacity: 0.4;
 }
 
 .courses-icons>img:hover,
