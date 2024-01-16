@@ -1,0 +1,54 @@
+@mixin flex($justifyContent:flex-start, $alignItems:stretch, $flexDirection:row) {
+    display: flex;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+    flex-direction: $flexDirection;
+}
+
+@mixin cursorPointer() {
+    cursor: pointer;
+}
+
+.header {
+    background-color: $hbgColor;
+    @include flex();
+    padding: 0 30px;
+    .links {
+        margin: 0 16px;
+        padding: 8px 0 4px 0;
+        color: $green;
+        text-align: right;
+        letter-spacing: 0px;
+        border-bottom: 4px solid $hbgColor;
+        text-transform: uppercase;
+        &:hover {
+            color: $white;
+            border-bottom: 4px solid $white;
+            @include cursorPointer();
+        }
+    }
+    .active {
+        color: $white;
+        border-bottom: 4px solid white;
+        margin-left: auto;
+    }
+    // .a-disabled {
+    //     display: none;
+    // }
+    .menu {
+        display: none;
+    }
+}
+
+.header::before {
+    content: " ";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    height: 56px;
+    background-image: url("/images/header\ pattern\ image.png");
+    mix-blend-mode: overlay;
+    opacity: 1;
+}

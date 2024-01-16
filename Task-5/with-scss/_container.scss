@@ -1,0 +1,56 @@
+.container {
+    padding: 24px;
+    .courses {
+        background-color: $lightGreen;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .c1,
+    .c2 {
+        @include flex(center, center);
+        border-bottom: 4px solid $lightGreen;
+        &:hover {
+            @include cursorPointer();
+            border-bottom: 4px solid $classBorder;
+        }
+        .cNum {
+            font: normal normal bolder 24px/28px $font;
+            margin: 19px 8px 15px 8px;
+        }
+        .cName {
+            font: normal normal 600 16px/20px $font;
+        }
+    }
+    .info {
+        border-bottom: 1px solid $borderColor;
+        margin: 24px;
+        .filter-panel {
+            @include flex(space-between);
+            margin: 24px 0px;
+            .c {
+                align-self: flex-end;
+                letter-spacing: 0px;
+                font: normal normal bold 12px/14px $font;
+                color: $infoTextColor;
+            }
+            .s-div {
+                @include flex();
+                .sort-input {
+                    font: normal normal bold 12px/16px $font;
+                    letter-spacing: 0px;
+                    color: $infoTextColor;
+                }
+                .selectC {
+                    border: none;
+                    border-bottom: 1px solid $borderColor;
+                    width: 180px;
+                    background-color: $bgColor;
+                    letter-spacing: 0px;
+                    color: $selectColor;
+                    margin-right: 24px;
+                    font: normal normal bold 16px/20px $font;
+                }
+            }
+        }
+    }
+}
