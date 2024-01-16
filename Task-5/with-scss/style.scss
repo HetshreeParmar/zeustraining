@@ -13,42 +13,57 @@
 
 html,
 body {
+    background-color: $bgColor;
     font-family: $font;
+    height: 100%;
 }
 
-.flex {
-    @include flex($flexDirection: column);
-}
-
-.f {
-    margin: 16px 16px 16px 16px;
-    font: normal normal bold 14px/18px $font;
-    color: $spanColor;
-    text-align: center;
-}
-
-b {
-    color: $pipeColor;
+.contact-div {
+    @include flex(center);
+    font: normal normal bold 14px/18px 'Quicksand';
+    letter-spacing: 0px;
+    color: $green;
+    margin: auto 16px 16px 16px;
+    .pipe {
+        color: $pipeColor;
+        margin: 0 5px;
+    }
+    .contact:hover,
+    .about:hover {
+        opacity: 0.4;
+        cursor: pointer;
+    }
 }
 
 .footer {
-    @include flex(center,
-    center);
+    background-color: $footerbgColor;
     padding-top: 8px;
     padding-bottom: 8px;
-    background-color: $footerbgColor;
-    color: $footerTextColor;
-    font: normal normal bold 12px/16px $font;
+    .footer-text {
+        font: normal normal bold 12px/16px $font;
+        letter-spacing: 0px;
+        color: $footerTextColor;
+        margin: 0 5px;
+        @include flex(center,
+        center);
+    }
 }
 
 @media screen and (max-width: 1000px) {
-    .c-grid {
-        grid-template-columns: 1fr;
+    .container {
+        .c-grid {
+            grid-template-columns: 1fr;
+        }
     }
-    .a-disabled {
-        display: none;
-    }
-    .a-able {
-        display: block;
+    .header {
+        .a-disabled {
+            display: none;
+        }
+        .bell {
+            margin-left: auto;
+        }
+        .menu {
+            display: contents;
+        }
     }
 }

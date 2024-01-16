@@ -1,43 +1,15 @@
-@mixin flex($justifyContent:flex-start, $alignItems:stretch, $flexDirection:row) {
-    display: flex;
-    justify-content: $justifyContent;
-    align-items: $alignItems;
-    flex-direction: $flexDirection;
-}
-
-@mixin searchInput() {
-    border: 0;
-    outline: 0;
-    width: 100%;
-    background: transparent;
-    border-bottom: 1px solid $grayColor;
-}
-
-@mixin forgot() {
-    margin-left: auto;
-    margin-top: 0;
-    margin-top: 0;
-    color: $green;
-    font: normal normal normal 14px/18px 'mediumQuick';
-}
-
-@mixin btnStyle() {
-    background-color: $btnColor;
-    box-shadow: 0px 3px 5px $btnBoxShadow;
-    height: 40px;
-    width: 216px;
-    border: 0;
-    outline: 0;
-}
-
+@import './fxn';
 .header {
+    @include flex(start, center);
     background-color: $headerbgColor;
     height: 56px;
-    border-bottom: 2px solid rgba(49, 185, 228, 1);
-    @include flex(start, center);
-    img {
+    border-bottom: 2px solid $borderColor;
+    .headerLogo {
         padding-left: 24px;
         height: 36px;
+        &:hover {
+            @include cursorPointer();
+        }
     }
 }
 
@@ -52,4 +24,7 @@ nav::before {
     background-image: url("/images/header\ pattern\ image.png");
     mix-blend-mode: overlay;
     opacity: 1;
+    .headerLogo:hover {
+        @include cursorPointer();
+    }
 }

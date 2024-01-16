@@ -1,6 +1,5 @@
 .container {
     padding: 24px;
-    background-color: $bgColor;
     .courses {
         background-color: $lightGreen;
         display: grid;
@@ -10,6 +9,10 @@
     .c2 {
         @include flex(center, center);
         border-bottom: 4px solid $lightGreen;
+        &:hover {
+            @include cursorPointer();
+            border-bottom: 4px solid $classBorder;
+        }
         .cNum {
             font: normal normal bolder 24px/28px $font;
             margin: 19px 8px 15px 8px;
@@ -18,41 +21,36 @@
             font: normal normal 600 16px/20px $font;
         }
     }
-    .c1:hover,
-    .c2:hover {
-        cursor: pointer;
-        border-bottom: 4px solid $classBorder;
-    }
     .info {
-        @include flex(space-between);
-        margin: 24px 0px;
-        .c {
-            align-self: flex-end;
-            letter-spacing: 0px;
-            font: normal normal bold 12px/14px $font;
-            color: $infoTextColor;
-        }
-        .s-div {
-            @include flex();
-            .sort-input {
-                font: normal normal bold 12px/16px $font;
+        border-bottom: 1px solid $borderColor;
+        margin: 24px;
+        .filter-panel {
+            @include flex(space-between);
+            margin: 24px 0px;
+            .c {
+                align-self: flex-end;
                 letter-spacing: 0px;
+                font: normal normal bold 12px/14px $font;
                 color: $infoTextColor;
             }
-            .selectC {
-                border: none;
-                border-bottom: 1px solid $borderColor;
-                width: 180px;
-                background-color: $bgColor;
-                letter-spacing: 0px;
-                color: $selectColor;
-                margin-right: 24px;
-                font: normal normal bold 16px/20px $font;
+            .s-div {
+                @include flex();
+                .sort-input {
+                    font: normal normal bold 12px/16px $font;
+                    letter-spacing: 0px;
+                    color: $infoTextColor;
+                }
+                .selectC {
+                    border: none;
+                    border-bottom: 1px solid $borderColor;
+                    width: 180px;
+                    background-color: $bgColor;
+                    letter-spacing: 0px;
+                    color: $selectColor;
+                    margin-right: 24px;
+                    font: normal normal bold 16px/20px $font;
+                }
             }
         }
-    }
-    .endLine {
-        border-top: 1px solid $borderColor;
-        margin-bottom: 24px;
     }
 }

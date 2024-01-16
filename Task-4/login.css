@@ -1,17 +1,15 @@
 @font-face {
     font-family: mediumQuick;
-    src: url(/static/Quicksand-Medium.ttf);
+    src: url('/static/Quicksand-Medium.ttf');
 }
 
 body {
     margin: 0;
     font-family: 'mediumQuick';
-}
-
-html,
-body {
     box-sizing: border-box;
-    height: 100%;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
     background-color: rgba(238, 238, 238, 1);
 }
 
@@ -43,23 +41,16 @@ nav::before {
 }
 
 .container {
-    display: flex;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
+    margin: 50px auto auto auto;
+    background: #FFFFFF;
+    width: 450px;
+    border-top: 4px solid #3AC7EC;
+    padding: 20px 36px 24px 36px;
+    height: fit-content;
+    border-radius: 2px 2px 0px 0px;
 }
 
-.wrapper {
-    display: flex;
-    height: 550px;
-    width: 448px;
-    border-top: 4px solid rgba(58, 199, 236, 1);
-    background-color: white;
-    padding: 20px 32px;
-    flex-direction: column;
-}
-
-.inner {
+.form-heading {
     display: flex;
     flex-direction: row;
 }
@@ -69,7 +60,7 @@ nav::before {
     width: 24px;
 }
 
-.title {
+.form-title {
     color: rgba(34, 34, 34, 1);
     font-size: 24px;
     line-height: 28px;
@@ -78,161 +69,160 @@ nav::before {
     text-align: center;
 }
 
-.form1 {
-    margin-top: 32px;
-    display: flex;
-    flex-direction: column;
+.radio-group {
+    padding-top: 30px;
 }
 
-.line {
-    display: flex;
-    flex-direction: row;
+input[type="radio"],
+input[type="checkbox"] {
+    font: normal normal bold 24px/17px Material-Design-Iconic-Font;
+    cursor: pointer;
+    transform: scale(1.5);
+    letter-spacing: 0px;
+    accent-color: #1F7A54;
+    opacity: 1;
 }
 
-.line>img {
-    padding-right: 8px;
+.school-label {
+    margin-right: 32px;
+    text-align: left;
+    font: normal normal bold 16px/20px 'mediumQuick';
+    letter-spacing: 0px;
+    color: #333333;
+    opacity: 1;
 }
 
-.line>p {
-    font-size: 16px;
-    line-height: 20px;
+.state-label,
+.district-label {
+    text-align: left;
+    font: normal normal bold 12px/16px 'Quicksand';
+    letter-spacing: 0px;
+    color: #666666;
+    opacity: 1;
 }
 
-.in {
-    font-size: 12px;
-    line-height: 16px;
-    color: rgba(102, 102, 102, 1);
-    margin-bottom: 0;
-}
-
-.r {
-    padding-right: 35px;
-}
-
-.in1 {
-    margin: 0;
-    display: flex;
-    border-bottom: 1px solid gray;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.in1>img {
-    margin-left: auto;
-    height: 20px;
-    width: 20px;
-}
-
-.input4 .img {
-    margin-left: auto;
-    height: 20px;
-    width: 20px;
-}
-
-.input4 {
-    display: flex;
-    flex-direction: column;
-}
-
-.input4 .in1 {
-    height: 45px;
-}
-
-.input4 .inText {
-    color: rgba(102, 102, 102, 1);
-    font-size: 16px;
-    line-height: 20px;
-    margin-bottom: 0;
-}
-
-.input3 {
-    display: flex;
-    flex-direction: column;
-}
-
-.input3 .in1 {
-    height: 45px;
-}
-
-.input1 .inText {
-    color: rgba(34, 34, 34, 1);
-    font-size: 16px;
-    line-height: 20px;
-    margin-bottom: 0;
-    margin-top: 0;
-}
-
-.search-input {
-    border: 0;
+.state-select,
+.district-select {
     width: 100%;
-    outline: 0;
+    text-align: left;
+    font: normal normal bold 16px/20px Quicksand;
+    letter-spacing: 0px;
+    color: #222222;
+    opacity: 1;
     background: transparent;
-    border-bottom: 1px solid gray;
+    border: none;
+    border-bottom: 1px solid #000000;
 }
 
+.stateInput {
+    margin-bottom: 36px;
+}
+
+.districtInput {
+    margin-bottom: 56px;
+}
+
+.username-div {
+    margin-bottom: 33px;
+}
+
+.username-input,
 .pass-input {
-    border: 0;
+    outline: none;
+    border: none;
     width: 100%;
-    outline: 0;
-    background: transparent;
+    text-align: left;
+    font: normal normal bold 16px/20px 'mediumQuick';
+    letter-spacing: 0px;
+    color: #666666;
+    opacity: 1;
+    border-bottom: 1px solid #000000;
 }
 
-.pass {
-    display: flex;
-    justify-content: space-around;
-    border: 0;
-    width: 100%;
-    outline: 0;
-    background: transparent;
-    border-bottom: 1px solid gray;
-}
-
-.left {
-    margin-left: auto;
+.forgot-label {
+    text-align: right;
+    font: normal normal bold 14px/18px 'mediumQuick';
+    letter-spacing: 0px;
+    color: #1F7A54;
+    text-transform: uppercase;
+    opacity: 1;
     margin-top: 0;
-    margin-bottom: 0;
-    color: rgba(31, 122, 84, 1);
-    font-size: 14px;
-    line-height: 18px;
-    font-weight: 500;
+    cursor: pointer;
 }
 
-::placeholder {
-    font-size: 16px;
-    line-height: 20px;
-    color: rgba(102, 102, 102, 1);
+.password-div {
+    margin-bottom: 24px;
+}
+
+.pass-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.passImg {
+    border-bottom: 1px solid #000000;
 }
 
 .rem {
-    display: flex;
+    margin-bottom: 32px;
+    font-weight: bold;
 }
 
-button {
+.btn {
     background-color: rgba(63, 210, 139, 1);
     box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.24);
     height: 40px;
     width: 216px;
     border: 0;
     outline: 0;
+    cursor: pointer;
 }
 
-b {
-    color: rgba(0, 0, 0, 0.12);
+.contact {
+    align-items: end;
+    justify-content: center;
+    display: flex;
+    margin: 0 auto;
+    font: normal normal bold 14px/18px Quicksand;
+    letter-spacing: 0px;
+    /* color: #1F7A54; */
+    margin: 16px;
 }
 
-.f {
-    font-size: 14px;
-    line-height: 18px;
-    color: rgba(31, 122, 84, 1);
-    text-align: center;
+.contact a {
+    text-decoration: none;
+    color: #1F7A54;
+}
+
+.gray-pipe {
+    color: #0000001F;
+    margin: 0 5px;
 }
 
 .footer {
-    display: flex;
-    background-color: rgba(224, 225, 225, 1);
-    justify-content: center;
-    color: rgba(97, 97, 97, 1);
-    align-items: center;
-    font-size: 12px;
-    line-height: 16px;
+    width: 100%;
+    text-align: center;
+    background-color: #E0E1E1;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    margin-bottom: 0%;
+    bottom: 0px;
+}
+
+.footer-quantum {
+    font: normal normal bold 14px/18px Quicksand;
+    color: #1F2834;
+}
+
+.footer-text {
+    font: normal normal bold 12px/16px Quicksand;
+    letter-spacing: 0px;
+    color: #616161;
+    margin: 0 5px;
+}
+
+@media screen and (max-width: 1000px) {
+    .container {
+        margin: 50px 140px auto 140px;
+    }
 }

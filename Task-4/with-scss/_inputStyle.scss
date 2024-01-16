@@ -1,0 +1,23 @@
+.radio-group {
+    padding-top: 30px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    font: normal normal bold 24px/17px Material-Design-Iconic-Font;
+    @include cursorPointer();
+    transform: scale(1.5);
+    letter-spacing: 0px;
+    accent-color: $green;
+    opacity: 1;
+}
+
+@mixin btnStyle() {
+    background-color: $btnColor;
+    box-shadow: 0px 3px 5px $btnBoxShadow;
+    height: 40px;
+    width: 216px;
+    border: 0;
+    outline: 0;
+    @include cursorPointer();
+}

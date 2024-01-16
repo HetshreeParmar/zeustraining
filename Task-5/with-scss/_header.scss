@@ -5,33 +5,42 @@
     flex-direction: $flexDirection;
 }
 
+@mixin cursorPointer() {
+    cursor: pointer;
+}
+
 .header {
     background-color: $hbgColor;
-    @include flex(end, center);
-    opacity: 1;
-    height: 56px;
+    @include flex();
     padding: 0 30px;
-    .hLogo {
-        margin-right: auto;
-    }
     .links {
         margin: 0 16px;
         padding: 8px 0 4px 0;
         color: $green;
         text-align: right;
         letter-spacing: 0px;
+        border-bottom: 4px solid $hbgColor;
         text-transform: uppercase;
+        &:hover {
+            color: $white;
+            border-bottom: 4px solid $white;
+            @include cursorPointer();
+        }
     }
     .active {
         color: $white;
         border-bottom: 4px solid white;
+        margin-left: auto;
     }
-    .a-able {
+    // .a-disabled {
+    //     display: none;
+    // }
+    .menu {
         display: none;
     }
 }
 
-nav::before {
+.header::before {
     content: " ";
     position: absolute;
     top: 0px;
