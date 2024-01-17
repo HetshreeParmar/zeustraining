@@ -13,6 +13,7 @@
     background-color: $hbgColor;
     @include flex();
     padding: 0 30px;
+    height: 56px;
     .links {
         margin: 0 16px;
         padding: 8px 0 4px 0;
@@ -20,7 +21,6 @@
         text-align: right;
         letter-spacing: 0px;
         border-bottom: 4px solid $hbgColor;
-        text-transform: uppercase;
         &:hover {
             color: $white;
             border-bottom: 4px solid $white;
@@ -32,23 +32,149 @@
         border-bottom: 4px solid white;
         margin-left: auto;
     }
-    // .a-disabled {
-    //     display: none;
-    // }
     .menu {
         display: none;
     }
+    .links {
+        .alerts-announcements {
+            max-height: 0;
+            z-index: 1;
+            overflow: hidden;
+            position: absolute;
+            transition: max-height 0.2s ease-in-out;
+            width: 315px;
+            right: 2%;
+            top: 44px;
+            .alert {
+                display: none;
+            }
+            .alert-show-button,
+            .announcement-show-button {
+                display: none;
+            }
+        }
+        &:hover {
+            .links {
+                color: $classBorder;
+                text-align: left;
+            }
+            .alerts-announcements {
+                width: 315px;
+                max-height: 580px;
+                z-index: 1;
+                position: absolute;
+                overflow-y: scroll;
+                overflow-x: hidden;
+                right: 0;
+                top: 44px;
+                background-color: $white;
+                border: 1px solid $borderColor;
+                box-shadow: 0px 13px 20px $boxshadow;
+                @include flex($flexDirection: column);
+                .alert {
+                    @include flex($flexDirection: column);
+                    padding: 16px;
+                    border-bottom: 1px solid $endBorder;
+                    .alert-title {
+                        @include flex();
+                        margin-bottom: 8px;
+                        .alert-author {
+                            color: $classBorder;
+                            margin-right: auto;
+                            font-size: 14px;
+                        }
+                        .alert-read-status {
+                            margin-left: auto;
+                            color: $spanColor;
+                        }
+                    }
+                    .alert-message {
+                        font-size: 14px;
+                        color: $classBorder;
+                        text-align: left;
+                    }
+                    .label-class,
+                    .label-course,
+                    .label-files {
+                        text-align: left;
+                        font-size: 12px;
+                        color: $footerTextColor;
+                        margin-bottom: 8px;
+                        @include flex();
+                    }
+                    .alert-class,
+                    .alert-course {
+                        text-align: left;
+                        font-size: 12px;
+                        color: $classBorder;
+                        margin-bottom: 8px;
+                    }
+                    .alert-footer {
+                        @include flex();
+                        font-size: 12px;
+                        font-weight: normal;
+                        color: $footerTextColor;
+                    }
+                    .alert-timestamp {
+                        margin-left: auto;
+                        font-size: 12px;
+                        font-weight: normal;
+                        color: $footerTextColor;
+                    }
+                }
+                .alert-unread {
+                    background-color: $unreadalert;
+                }
+                .alert-show-button,
+                .announcement-show-button {
+                    position: sticky;
+                    bottom: 0;
+                    left: 0;
+                    text-align: center;
+                    background: $white;
+                    border: none;
+                    box-shadow: 0px 1px 6px $boxshadow;
+                    border-radius: 0px 0px 2px 2px;
+                    font-size: 14px;
+                    color: $spanColor;
+                }
+                .alert-show-button {
+                    padding: 15px;
+                    &:hover {
+                        background-color: $buttonhovercolor;
+                    }
+                }
+                .announcement-show-button,
+                .alert-show-button {
+                    @include flex(center);
+                }
+                .announcement-show-button {
+                    padding: 15px;
+                }
+                .announcement-buttons {
+                    padding: 5px;
+                    width: 50%;
+                    &:hover {
+                        background-color: $buttonhovercolor;
+                    }
+                }
+                .seperator {
+                    border-right: 1px solid $boxshadow;
+                }
+            }
+        }
+    }
 }
 
-.header::before {
-    content: " ";
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    left: 0px;
-    bottom: 0px;
-    height: 56px;
-    background-image: url("/images/header\ pattern\ image.png");
-    mix-blend-mode: overlay;
-    opacity: 1;
-}
+// .header::before {
+//     content: " ";
+//     position: absolute;
+//     top: 0px;
+//     right: 0px;
+//     left: 0px;
+//     bottom: 0px;
+//     height: 56px;
+//     background-image: url("/images/header\ pattern\ image.png");
+//     mix-blend-mode: overlay;
+//     opacity: 1;
+// }

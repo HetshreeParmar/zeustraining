@@ -13,6 +13,7 @@ body {
     background-color: #eeeeee;
     font-family: 'Quicksand';
     height: 100%;
+    font-weight: bold;
 }
 
 .flex {
@@ -37,7 +38,6 @@ body {
     text-align: right;
     letter-spacing: 0px;
     color: #3FD28B;
-    text-transform: uppercase;
     margin: 0 16px;
     padding: 8px 0 4px 0;
     border-bottom: 4px solid #25313F;
@@ -63,6 +63,158 @@ body {
 
 .active {
     margin-left: auto;
+}
+
+.alerts-announcements {
+    max-height: 0;
+    z-index: 1;
+    overflow: hidden;
+    position: absolute;
+    transition: max-height 0.2s ease-in-out;
+    width: 315px;
+    right: 0;
+    top: 44px;
+}
+
+.alert {
+    display: none;
+}
+
+.alert-show-button,
+.announcement-show-button {
+    display: none;
+}
+
+
+/* .header .links:hover {
+    color: #222222;
+    text-align: left;
+} */
+
+.alerts-announcements {
+    width: 315px;
+    max-height: 580px;
+    z-index: 1;
+    position: absolute;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    right: 0;
+    top: 44px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    box-shadow: 0px 13px 20px rgba(0, 0, 0, 0.2392156863);
+    display: flex;
+    flex-direction: column;
+}
+
+.links:hover .alert {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2392156863);
+}
+
+.header .links:hover .alerts-announcements .alert-author {
+    color: #222222;
+    margin-right: auto;
+    font-size: 14px;
+}
+
+.header .links:hover .alerts-announcements .alert .alert-title {
+    display: flex;
+    margin-bottom: 8px;
+}
+
+.header .links:hover .alerts-announcements .alert .alert-message {
+    font-size: 14px;
+    color: #222222;
+    text-align: left;
+}
+
+.header .links:hover .alerts-announcements .alert .alert-title .alert-read-status {
+    margin-left: auto;
+    color: #1F7A54;
+}
+
+.header .links:hover .alerts-announcements .alert .label-class,
+.header .links:hover .alerts-announcements .alert .label-course,
+.header .links:hover .alerts-announcements .alert .label-files {
+    text-align: left;
+    font-size: 12px;
+    color: #616161;
+    margin-bottom: 8px;
+    display: flex;
+}
+
+.header .links:hover .alerts-announcements .alert .alert-class,
+.header .links:hover .alerts-announcements .alert .alert-course {
+    text-align: left;
+    font-size: 12px;
+    color: #222222;
+    margin-bottom: 8px;
+}
+
+.header .links:hover .alerts-announcements .alert .alert-footer {
+    display: flex;
+    font-size: 12px;
+    font-weight: normal;
+    color: #616161;
+}
+
+.header .links:hover .alerts-announcements .alert .alert-timestamp {
+    margin-left: auto;
+    font-size: 12px;
+    font-weight: normal;
+    color: #616161;
+}
+
+.header .links:hover .alerts-announcements .alert-unread {
+    background-color: #ffffee;
+}
+
+.header .links:hover .alerts-announcements .alert-show-button,
+.header .links:hover .alerts-announcements .announcement-show-button {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    background: #ffffff;
+    border: none;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.2392156863);
+    border-radius: 0px 0px 2px 2px;
+    font-size: 14px;
+    color: #1F7A54;
+}
+
+.header .links:hover .alerts-announcements .alert-show-button {
+    padding: 15px;
+}
+
+.header .links:hover .alerts-announcements .alert-show-button:hover {
+    background-color: #f3f3f3;
+}
+
+.header .links:hover .alerts-announcements .announcement-show-button,
+.header .links:hover .alerts-announcements .alert-show-button {
+    display: flex;
+    justify-content: center;
+}
+
+.header .links:hover .alerts-announcements .announcement-show-button {
+    padding: 15px;
+}
+
+.header .links:hover .alerts-announcements .announcement-buttons {
+    padding: 5px;
+    width: 50%;
+}
+
+.header .links:hover .alerts-announcements .announcement-buttons:hover {
+    background-color: #f3f3f3;
+}
+
+.header .links:hover .alerts-announcements .seperator {
+    border-right: rgba(0, 0, 0, 0.2392156863) 1px solid;
 }
 
 .container {
@@ -314,8 +466,42 @@ body {
     .bell {
         margin-left: auto;
     }
-    .menu {
+    .header .menu {
         display: block;
+    }
+    .header .menu .hamburger-menu {
+        z-index: 1;
+        overflow: hidden;
+        position: absolute;
+        top: 44px;
+        right: 0;
+    }
+    .header .menu .hamburger-menu .menuitem {
+        width: 0;
+        visibility: hidden;
+        transition: width 0.2s ease-in-out;
+    }
+    .header .menu:hover .hamburger-menu {
+        z-index: 1;
+        position: absolute;
+        right: 0;
+        top: 44px;
+        background-color: #ffffff;
+        color: #1F7A54;
+        border: 1px solid #ccc;
+        box-shadow: 0px 13px 20px rgba(0, 0, 0, 0.2392156863);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .header .menu:hover .hamburger-menu .menuitem {
+        padding: 16px 15px;
+        width: 280px;
+        text-align: left;
+        visibility: visible;
+    }
+    .header .menu:hover .hamburger-menu .menuitem:hover {
+        background-color: #f3f3f3;
     }
     /* .header.resposnive {
         position: relative;

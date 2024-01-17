@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="dashboard.css"> -->
+    <link rel="stylesheet" href="./with-scss/style.css">
+    <title>Dashboard Page</title>
+</head>
+
+<body>
+    <div class="flex">
+        <nav class="header">
+            <img class="hLogo" src="/icons/logo used in header.svg" alt="HeaderLogo">
+            <div class="links active a-disabled">DASHBOARD</div>
+            <div class="links a-disabled">CONTENT</div>
+            <div class="links a-disabled">USERS</div>
+            <div class="links a-disabled">REPORTS</div>
+            <div class="links a-disabled">ADMIN</div>
+            <div class="links"><img src="/icons/alerts.svg" alt="alertLogo"></div>
+            <div class="links"><img src="/icons/announcements.svg" alt="announcementLogo"></div>
+            <div class="links"><img src="/icons/account_circle.svg" alt="accountLogo"></div>
+            <div class="a-able"><img src="/icons/hamburger-menu.svg" alt="menuLogo"></div>
+        </nav>
+        <div class="container">
+            <div class="courses">
+                <div class="c1">
+                    <img src="/icons/courses.svg" alt="courseLogo">
+                    <div class="cNum">4</div>
+                    <div class="cName">Courses</div>
+                </div>
+                <div class="c2">
+                    <img src="/icons/classes.svg" alt="classLogo">
+                    <div class="cNum">4</div>
+                    <div class="cName">Classes</div>
+                </div>
+            </div>
+            <div class="info">
+                <div class="c">Showing 4 of 4 courses</div>
+                <div class="s-div">
+                    <div class="sort-input">Sort By: </div>
+                    <div class="sort">
+                        <select name="course" id="" class="selectC">
+                            <option value="" disabled selected>Cource Name</option>
+                            <option value="">Acceleration</option>
+                            <option value="">Displacement, Velocity and Speed</option>
+                            <option value="">Introduction to Biology: Micro organisms and how they affec...</option>
+                            <option value="">Introduction to High School Mathematics</option>
+                        </select>
+                        <img src="/icons/sort.svg" alt="sortLogo">
+                    </div>
+                </div>
+            </div>
+            <hr class="endLine" />
+            <div class="c-grid">
+                <div class="c-cards">
+                    <div class="card">
+                        <img src="/images/imageMask.png" alt="cardImage" class="card-img">
+                        <div class="card-details">
+                            <div class="l1">
+                                <div class="card-title">Acceleration</div>
+                                <img src="/icons/favourite.svg" alt="favLogo">
+                            </div>
+                            <div class="l2 c-label">
+                                Physics | Garade 7 <span>+2</span>
+                            </div>
+                            <div class="l3">
+                                <p><strong>4</strong> Units</p>
+                                <p><strong>18</strong> Lessons</p>
+                                <p><strong>24</strong> Topics</p>
+                            </div>
+                            <select name="" id="" class="card-select-input">
+                                <option value="">Mr. Frank's Class B</option>
+                                <option value="">Mr. Frank's Class A</option>
+                            </select>
+                            <div class="l4">
+                                <p>50 Students | </p>
+                                <p>21-Jan-2020 - 21-Aug-2020</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-icons">
+                        <img src="/icons/preview.svg" alt="previewLogo">
+                        <img src="/icons/manage course.svg" alt="manageLogo">
+                        <img src="/icons/grade submissions.svg" alt="submissionsLogo">
+                        <img src="/icons/reports.svg" alt="reportLogo">
+                    </div>
+                </div>
+                <div class="c-cards">
+                    <div class="card">
+                        <img src="/images/imageMask-1.png" alt="cardImage" class="card-img">
+                        <div class="card-details">
+                            <div class="l1">
+                                <div class="card-title">Displacement, velocity and Speed</div>
+                                <img src="/icons/favourite.svg" alt="favLogo">
+                            </div>
+                            <div class="l2 c-label">
+                                Physics 2 | Garade 6 <span>+3</span>
+                            </div>
+                            <div class="l3">
+                                <p><strong>2</strong> Units</p>
+                                <p><strong>15</strong> Lessons</p>
+                                <p><strong>20</strong> Topics</p>
+                            </div>
+                            <select name="" id="" class="card-select-input">
+                                <option value="">No Classes</option>
+                                <option value="">Mr. Frank's Class A</option>
+                                <option value="">Mr. Frank's Class B</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="card-icons">
+                        <img src="/icons/preview.svg" alt="previewLogo">
+                        <img class="i-disabled" src="/icons/manage course.svg" alt="manageLogo">
+                        <img class="i-disabled" src="/icons/grade submissions.svg" alt="submissionsLogo">
+                        <img src="/icons/reports.svg" alt="reportLogo">
+                    </div>
+                </div>
+                <div class="c-cards">
+                    <div class="card">
+                        <img src="/images/imageMask-2.png" alt="cardImage" class="card-img">
+                        <div class="card-details">
+                            <div class="l1">
+                                <div class="card-title">Introduction to Biology: Micro organisms and how they affec...
+                                </div>
+                                <img src="/icons/favourite.svg" alt="favLogo">
+                            </div>
+                            <div class="l2 c-label">
+                                Biology | Garade 4 <span>+1</span>
+                            </div>
+                            <div class="l3">
+                                <p><strong>5</strong> Units</p>
+                                <p><strong>16</strong> Lessons</p>
+                                <p><strong>22</strong> Topics</p>
+                            </div>
+                            <select name="" id="" class="card-select-input">
+                                <option value="">All Classes</option>
+                                <option value="">Mr. Frank's Class A</option>
+                                <option value="">Mr. Frank's Class B</option>
+                            </select>
+                            <div class="l4">
+                                <p>300 Students </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-icons">
+                        <img src="/icons/preview.svg" alt="previewLogo">
+                        <img class="i-disabled" src="/icons/manage course.svg" alt="manageLogo">
+                        <img class="i-disabled" src="/icons/grade submissions.svg" alt="submissionsLogo">
+                        <img src="/icons/reports.svg" alt="reportLogo">
+                    </div>
+                </div>
+                <div class="c-cards">
+                    <div class="card">
+                        <img src="/images/imageMask-3.png" alt="cardImage" class="card-img">
+                        <div class="card-details">
+                            <div class="l1">
+                                <div class="card-title">Introductionn to High School Mathematics</div>
+                                <img src="/icons/favourite.svg" alt="favLogo">
+                            </div>
+                            <div class="l2 c-label">
+                                Mathematics | Garade 8 <span>+3</span>
+                            </div>
+                            <select name="" id="" class="card-select-input">
+                                <option value="">Mr. Frank's Class A</option>
+                                <option value="">Mr. Frank's Class B</option>
+                            </select>
+                            <div class="l4">
+                                <p>44 Students | </p>
+                                <p>14-Oct-2019 - 20-Oct-2020</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-icons">
+                        <img src="/icons/preview.svg" alt="previewLogo">
+                        <img src="/icons/manage course.svg" alt="manageLogo">
+                        <img src="/icons/grade submissions.svg" alt="submissionsLogo">
+                        <img src="/icons/reports.svg" alt="reportLogo">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contact">
+            <a href="#">About</a>
+            <div class="gray-pipe">|</div>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="footer">
+            <img class="footerLogo" src="./icons/logo used in footer.svg" alt="">
+            <div class="footer-text">
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" height="15" width="13" viewBox="0 0 384 512">
+                    <path fill="#f9d217"
+                        d="M297.2 248.9C311.6 228.3 320 203.2 320 176c0-70.7-57.3-128-128-128S64 105.3 64 176c0 27.2 8.4 52.3 22.8 72.9c3.7 5.3 8.1 11.3 12.8 17.7l0 0c12.9 17.7 28.3 38.9 39.8 59.8c10.4 19 15.7 38.8 18.3 57.5H109c-2.2-12-5.9-23.7-11.8-34.5c-9.9-18-22.2-34.9-34.5-51.8l0 0 0 0c-5.2-7.1-10.4-14.2-15.4-21.4C27.6 247.9 16 213.3 16 176C16 78.8 94.8 0 192 0s176 78.8 176 176c0 37.3-11.6 71.9-31.4 100.3c-5 7.2-10.2 14.3-15.4 21.4l0 0 0 0c-12.3 16.8-24.6 33.7-34.5 51.8c-5.9 10.8-9.6 22.5-11.8 34.5H226.4c2.6-18.7 7.9-38.6 18.3-57.5c11.5-20.9 26.9-42.1 39.8-59.8l0 0 0 0 0 0c4.7-6.4 9-12.4 12.7-17.7zM192 128c-26.5 0-48 21.5-48 48c0 8.8-7.2 16-16 16s-16-7.2-16-16c0-44.2 35.8-80 80-80c8.8 0 16 7.2 16 16s-7.2 16-16 16zm0 384c-44.2 0-80-35.8-80-80V416H272v16c0 44.2-35.8 80-80 80z" />
+                </svg> -->
+                <span class="gray-pipe">|</span><span class="footer-text">Copyright ©
+                    2020-2021</span><span class="footer-text company-name">Zeus Systems Pvt. Ltd.</span><span class="footer-text">All rights reserved.</span>
+            </div>
+        </div>
+        <!-- <p class="f">About us <b>|</b> Contact Us</p>
+        <div class="footer">
+            <div class="footer-text">
+                <img src="/dashboard/logo used in footer.svg" alt="quantum">
+                <span class="pipe large-screen">|</span><span class="footer-text">Copyright © 2020-2021</span><span class="footer-text company-name">Zeus Systems Pvt. Ltd.</span><span class="footer-text">All rights
+                    reserved.</span>
+            </div>
+        </div> -->
+        <!-- <div class="footer">
+            <img class="footerLogo" src="./icons/logo used in footer.svg" alt="">
+            <div class="footer-text">
+                <svg xmlns="http://www.w3.org/2000/svg" height="15" width="13" viewBox="0 0 384 512">
+                    <path fill="#f9d217"
+                        d="M297.2 248.9C311.6 228.3 320 203.2 320 176c0-70.7-57.3-128-128-128S64 105.3 64 176c0 27.2 8.4 52.3 22.8 72.9c3.7 5.3 8.1 11.3 12.8 17.7l0 0c12.9 17.7 28.3 38.9 39.8 59.8c10.4 19 15.7 38.8 18.3 57.5H109c-2.2-12-5.9-23.7-11.8-34.5c-9.9-18-22.2-34.9-34.5-51.8l0 0 0 0c-5.2-7.1-10.4-14.2-15.4-21.4C27.6 247.9 16 213.3 16 176C16 78.8 94.8 0 192 0s176 78.8 176 176c0 37.3-11.6 71.9-31.4 100.3c-5 7.2-10.2 14.3-15.4 21.4l0 0 0 0c-12.3 16.8-24.6 33.7-34.5 51.8c-5.9 10.8-9.6 22.5-11.8 34.5H226.4c2.6-18.7 7.9-38.6 18.3-57.5c11.5-20.9 26.9-42.1 39.8-59.8l0 0 0 0 0 0c4.7-6.4 9-12.4 12.7-17.7zM192 128c-26.5 0-48 21.5-48 48c0 8.8-7.2 16-16 16s-16-7.2-16-16c0-44.2 35.8-80 80-80c8.8 0 16 7.2 16 16s-7.2 16-16 16zm0 384c-44.2 0-80-35.8-80-80V416H272v16c0 44.2-35.8 80-80 80z" />
+                </svg>
+                <span class="gray-pipe">|</span><span class="footer-text">Copyright ©
+                    2020-2021</span><span class="footer-text company-name">Zeus Systems Pvt. Ltd.</span><span class="footer-text">All rights reserved.</span>
+            </div>
+        </div> -->
+        <!-- <div class="footer">
+            <img src="/icons/logo used in footer.svg" alt="FooterLogo">&nbsp;&nbsp;
+            <b>|</b>&nbsp;&nbsp;
+            <p>Copyrigth &copy; 2020-2021</p>&nbsp;&nbsp;
+            <p>Zeus Learning Pvt. Ltd.</p>&nbsp;&nbsp;
+            <p>All rights reserved.</p>
+        </div> -->
+    </div>
+</body>
+
+</html>

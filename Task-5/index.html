@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preload" href="/login-page/Quicksand-VariableFont_wght.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="stylesheet" href="./styles.css">
-    <!-- <link rel="stylesheet" href="./with-scss/style.css"> -->
+    <!-- <link rel="stylesheet" href="./styles.css"> -->
+    <link rel="stylesheet" href="./with-scss/style.css">
     <title>Dashboard Page</title>
 </head>
 
@@ -19,10 +19,24 @@
             <div class="links a-disabled">USERS</div>
             <div class="links a-disabled">REPORTS</div>
             <div class="links a-disabled">ADMIN</div>
-            <div class="links bell"><img src="./icons/alerts.svg" alt="Alert as image."></div>
-            <div class="links"><img src="./icons/announcements.svg" alt="announcements as image"></div>
+            <div class="links bell"><img src="./icons/alerts.svg" alt="Alert as image.">
+                <div class="alerts-announcements">
+                </div>
+            </div>
+            <div class="links"><img src="./icons/announcements.svg" alt="announcements as image">
+                <div class="alerts-announcements" id="ann">
+                </div>
+            </div>
             <div class="links profile"><img src="./icons/account_circle.svg" alt=""></div>
-            <div class="links menu"><img src="./icons/hamburger-menu.svg" alt=""></div>
+            <div class="links menu"><img src="./icons/hamburger-menu.svg" alt="">
+                <div class="hamburger-menu">
+                    <div class="menuitem">DASHBOARD</div>
+                    <div class="menuitem">CONTENT</div>
+                    <div class="menuitem">USERS</div>
+                    <div class="menuitem">REPORTS</div>
+                    <div class="menuitem">ADMIN</div>
+                </div>
+            </div>
         </div>
         <div class="container">
             <div class="courses">
@@ -71,6 +85,8 @@
         </div>
     </div>
     <script type="module" src="index.js"></script>
+    <script type="module" src="announcement.js"></script>
+    <script type="module" src="alert.js"></script>
 </body>
 
 </html>

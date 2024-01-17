@@ -1,7 +1,35 @@
 import cards from './data/data.js';
 
+// /**--------------------------------header----------------------------- */
+// const menu = document.querySelector('.dropdown__container');
+
+// const toggle = () => {
+//     if (menu.style.display === 'inline') {
+//         menu.style.display = 'none';
+//     } else {
+//         menu.style.display = 'inline';
+//     }
+// }
+
+// const hamburger = document.querySelector('#hamburger__icon');
+
+// hamburger.addEventListener("click", toggle);
+
+const updateMediaQuery = () => {
+    if (window.innerWidth > 768) {
+        menu.style.display = 'none';
+    }
+}
+
+window.addEventListener('resize', updateMediaQuery);
+
+
+
+
+/**--------------------------------cards------------------------------ */
 const card_html = document.querySelector('.c-grid');
-for (let i = 0; i < 4; i++) {
+
+for (let i = 0; i < cards.length; i++) {
     const card = document.createElement("div");
     card.className = `c-cards`;
     const subjects = cards[i].subject ? `${cards[i].subject}<div class="pipe">|</div>

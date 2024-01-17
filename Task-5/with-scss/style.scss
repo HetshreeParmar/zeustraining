@@ -2,6 +2,7 @@
 @import './header';
 @import './container';
 @import './cgrid';
+@import './mediaScreen';
 @font-face {
     font-family: quickSand;
     src: url('/static/Quicksand-VariableFont_wght.ttf');
@@ -15,6 +16,12 @@ html,
 body {
     background-color: $bgColor;
     font-family: $font;
+    height: 100%;
+    font-weight: bold;
+}
+
+.flex {
+    @include flex($flexDirection: column);
     height: 100%;
 }
 
@@ -46,24 +53,5 @@ body {
         margin: 0 5px;
         @include flex(center,
         center);
-    }
-}
-
-@media screen and (max-width: 1000px) {
-    .container {
-        .c-grid {
-            grid-template-columns: 1fr;
-        }
-    }
-    .header {
-        .a-disabled {
-            display: none;
-        }
-        .bell {
-            margin-left: auto;
-        }
-        .menu {
-            display: contents;
-        }
     }
 }
