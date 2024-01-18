@@ -40,6 +40,9 @@
                     letter-spacing: 0px;
                     color: $infoTextColor;
                 }
+                img {
+                    @include cursorPointer();
+                }
                 .selectC {
                     border: none;
                     border-bottom: 1px solid $borderColor;

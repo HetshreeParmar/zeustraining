@@ -15,13 +15,13 @@ import cards from './data/data.js';
 
 // hamburger.addEventListener("click", toggle);
 
-const updateMediaQuery = () => {
-    if (window.innerWidth > 768) {
-        menu.style.display = 'none';
-    }
-}
+// const updateMediaQuery = () => {
+//     if (window.innerWidth > 768) {
+//         menu.style.display = 'none';
+//     }
+// }
 
-window.addEventListener('resize', updateMediaQuery);
+// window.addEventListener('resize', updateMediaQuery);
 
 
 
@@ -36,10 +36,9 @@ for (let i = 0; i < cards.length; i++) {
         Grade
         <div class="grade">${cards[i].grade}</div>
         <div class="plus">${cards[i].kt}</div>` : ` `;
-    const lesseons = cards[i].unit ? ` <div class="number-line-2">${cards[i].unit}</div> Units 
-    <div class="number-line-2 lm">${cards[i].lesson}</div> Lessons 
-    <div class="number-line-2 lm">${cards[i].topic}</div> 
-    Topics ` : ` `;
+    const lesseons = cards[i].unit ? ` <div class="number-line-2"><b>${cards[i].unit}</b> Units</div> 
+        <div class="number-line-2 lm"><b>${cards[i].lesson}</b> Lessons</div> 
+        <div class="number-line-2 lm"><b>${cards[i].topic}</b></div> Topics` : ` `;
 
     let classesOptions = ``;
     for (let j = 0; j < cards[i].class.length; j++) {
